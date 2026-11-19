@@ -1,0 +1,86 @@
+site_name: Pipeline Wiki
+site_description: Documentation for Pipeline, the Minecraft data pack plugin platform.
+site_author: DV8FromTheCode
+site_url: https://dv8fromthecode.github.io/Pipeline-Wiki/
+repo_url: https://github.com/DV8FromTheCode/Pipeline-Wiki
+repo_name: DV8FromTheCode/Pipeline-Wiki
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/brand.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/DV8FromTheCode
+
+copyright: Copyright &copy; 2026 DV8FromTheCode
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Your First Pack: getting-started/your-first-pack.md
+      - Example Pack Tour: getting-started/example-pack-tour.md
+  - Pack Format:
+      - pipeline.json: pack-format/pipeline.json.md
+      - .pipe Files: pack-format/pipe-files.md
+      - Commands: pack-format/commands.md
+      - Events: pack-format/events.md
+      - Schedules: pack-format/schedules.md
+      - Permissions: pack-format/permissions.md
+      - Storage: pack-format/storage.md
+      - Inventories: pack-format/inventories.md
+      - Registry: pack-format/registry.md
+      - MCFunction Integration: pack-format/mcfunction-integration.md
+  - Reference:
+      - Actions: reference/actions.md
+      - Expressions: reference/expressions.md
+      - Events Table: reference/events-table.md
+      - Performance: reference/performance.md
+  - Changelog: changelog.md

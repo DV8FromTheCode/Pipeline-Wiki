@@ -1,0 +1,93 @@
+/* Pipeline brand palette — sampled from the gold pipe logo. */
+:root {
+  --pl-gold: #e09020;
+  --pl-gold-light: #f0c030;
+  --pl-gold-dark: #905000;
+  --pl-steel: #2b2f36;
+  --pl-steel-dark: #1c1f24;
+  --pl-valve-red: #c8282d;
+  --pl-bit-cyan: #38bdf8;
+}
+
+/* Light scheme: steel header, gold accents. */
+[data-md-color-scheme="default"][data-md-color-primary="custom"] {
+  --md-primary-fg-color: var(--pl-steel);
+  --md-primary-fg-color--light: #3a3f48;
+  --md-primary-fg-color--dark: var(--pl-steel-dark);
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+  --md-accent-fg-color: var(--pl-gold-dark);
+  --md-accent-fg-color--transparent: #90500019;
+  --md-typeset-a-color: #a86000;
+}
+
+/* Dark scheme: darker steel, brighter gold so it stays readable. */
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+  --md-primary-fg-color: var(--pl-steel-dark);
+  --md-primary-fg-color--light: var(--pl-steel);
+  --md-primary-fg-color--dark: #121417;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+  --md-accent-fg-color: var(--pl-gold-light);
+  --md-accent-fg-color--transparent: #f0c03019;
+  --md-typeset-a-color: var(--pl-gold);
+  --md-default-bg-color: #16181c;
+  --md-code-bg-color: #1e2126;
+}
+
+/* Gold underline on the active tab, gold search highlight. */
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--pl-gold-light);
+}
+.md-tabs__item--active .md-tabs__link {
+  border-bottom: 2px solid var(--pl-gold);
+}
+.md-search-result__item mark,
+.md-typeset mark {
+  background-color: var(--pl-gold-light);
+  color: var(--pl-steel-dark);
+}
+
+/* Larger logo in the header. */
+.md-header__button.md-logo img {
+  height: 1.8rem;
+  width: auto;
+}
+
+/* Homepage hero. */
+.pl-hero {
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+.pl-hero img {
+  max-width: min(100%, 640px);
+  height: auto;
+}
+.pl-hero p {
+  font-size: 1.1rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.5rem;
+}
+
+/* Admonition accents in brand colours. */
+.md-typeset .admonition.info,
+.md-typeset details.info {
+  border-color: var(--pl-gold);
+}
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary {
+  background-color: #e0902019;
+}
+.md-typeset .info > .admonition-title::before,
+.md-typeset .info > summary::before {
+  background-color: var(--pl-gold);
+}
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: var(--pl-valve-red);
+}
+.md-typeset .warning > .admonition-title::before,
+.md-typeset .warning > summary::before {
+  background-color: var(--pl-valve-red);
+}
